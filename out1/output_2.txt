@@ -1,0 +1,8 @@
+some : 1
+have : 1
+not : 2
+an : 1
+apple : 1
+in : 1
+greatness : 3
+upon : 1

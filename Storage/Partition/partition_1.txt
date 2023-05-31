@@ -1,0 +1,4 @@
+(Tom,(Role@Manager))
+(Tom,(Age@17))
+(Elon,(Age@1))
+(Tom,(Age@34))

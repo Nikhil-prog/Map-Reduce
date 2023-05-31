@@ -1,0 +1,2 @@
+(John,(Role@CEO))
+(John,(Age@21))

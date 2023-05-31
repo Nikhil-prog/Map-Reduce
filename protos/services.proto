@@ -1,0 +1,48 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+package map_reducer;
+
+service MapperReducer
+{
+    rpc get_worker_status(google.protobuf.Empty) returns (WORKER_STATUS) {}
+
+    rpc set_worker_status(WORKER_STATUS) returns (google.protobuf.Empty) {}
+
+    rpc assign_worker_a_task(ASSIGN_TASK) returns (google.protobuf.Empty) {}
+}
+
+enum FEATURE
+{
+    WORD_COUNT = 0;
+    INVERTED_INDEX = 1;
+    NATURAL_JOIN = 2;
+}
+
+enum STATUS
+{
+    IDLE = 0;
+    INTERIM_START = 1;
+    INTERIM_WORKING = 2;
+    INTERIM_DONE = 3;
+    PARTITION_START = 4;
+    PARTITION_WORKING = 5;
+    PARTITION_DONE = 6;
+    SUFFLE_SORT_START = 7;
+    SUFFLE_SORT_WORKING = 8;
+    SUFFLE_SORT_DONE = 9;
+}
+
+message WORKER_STATUS
+{
+    STATUS status = 1;
+}
+
+message ASSIGN_TASK
+{
+    FEATURE feature = 1;
+    STATUS task = 2;
+    string input_file = 3;
+    string output_file = 4;
+    int64 output_dir_files_num = 5;   
+}

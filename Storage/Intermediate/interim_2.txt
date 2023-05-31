@@ -1,0 +1,2 @@
+(Kevin,(Role@Chairman))
+(Nick,(Role@Associate))

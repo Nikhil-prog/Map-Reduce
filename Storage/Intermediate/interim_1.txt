@@ -1,0 +1,3 @@
+(Kevin,(Age@200))
+(Elon,(Age@1))
+(Tom,(Age@34))

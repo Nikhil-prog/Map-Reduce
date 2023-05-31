@@ -1,0 +1,5 @@
+(Kevin,(Role@Intern))
+(Smith,(Age@23))
+(Kevin,(Age@100))
+(Kevin,(Age@200))
+(Kevin,(Role@Chairman))
